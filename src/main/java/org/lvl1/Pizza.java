@@ -36,6 +36,7 @@ public class Pizza {
         private int size;
         private String dough;
         private List<Topping> toppings = new ArrayList<>();
+        Output output;
 
         public Builder() {
 
@@ -60,6 +61,15 @@ public class Pizza {
         }
 
         @Override
+        public PizzaBuilder setHawaiana() {
+            this.toppings.add(new Topping("Tomato"));
+            this.toppings.add(new Topping("Chess"));
+            this.toppings.add(new Topping("Jam"));
+            this.toppings.add(new Topping("Pineapple"));
+            return this;
+        }
+
+        @Override
         public Pizza build() {
             return new Pizza(this);
         }
@@ -67,6 +77,8 @@ public class Pizza {
         @Override
         public void showInfo() {
 
+            output.print(String.valueOf(size));
+            output.print(String.valueOf(dough));
         }
 
     }

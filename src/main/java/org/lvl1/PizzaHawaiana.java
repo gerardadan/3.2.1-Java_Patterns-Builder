@@ -3,7 +3,7 @@ package org.lvl1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pizza {
+public class PizzaHawaiana extends Pizza {
     private final int size;
     private final String dough;
     private List<Topping> toppings = new ArrayList<>();
@@ -20,7 +20,7 @@ public class Pizza {
         return toppings;
     }
 
-    private Pizza(Builder builder) {
+    private PizzaHawaiana(Builder builder) {
         this.size = builder.size;
         this.dough = builder.dough;
         this.toppings = List.copyOf(builder.toppings);
@@ -60,8 +60,8 @@ public class Pizza {
         }
 
         @Override
-        public Pizza build() {
-            return new Pizza(this);
+        public PizzaHawaiana build() {
+            return new PizzaHawaiana(this);
         }
 
         @Override

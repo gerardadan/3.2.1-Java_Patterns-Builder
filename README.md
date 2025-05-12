@@ -1,8 +1,4 @@
-Aquí tienes el README generado para este ejercicio sobre el patrón **Builder**:
-
----
-
-# Readme for Exercise: Builder – Pizza Order Management System
+Builder – Pizza Order Management System
 
 ## 📄 Description
 
